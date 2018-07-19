@@ -14,7 +14,7 @@ public class ChromeDriverTest {
     @Test
     public void testDriverLoad() throws InterruptedException {
         // Optional, if not specified, WebDriver will search your path for chromedriver.
-        System.setProperty("webdriver.chrome.driver", "~/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
