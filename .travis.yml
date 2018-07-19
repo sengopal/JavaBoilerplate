@@ -21,7 +21,7 @@ script:
   - whereis google-chrome-stable
   - whereis chromedriver
   - mvn clean install -DskipTests=true
-  - mnvn test -B
+  - mvn test -B
 
 before_script:
   - sh -e /etc/init.d/xvfb start
