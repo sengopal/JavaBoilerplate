@@ -8,11 +8,6 @@ os:
 sudo: required
 addons:
   chrome: stable
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
 
 install: # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
   - wget -N http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip -P ~/
@@ -25,6 +20,8 @@ install: # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
 script:
   - whereis google-chrome-stable
   - whereis chromedriver
+  - mvn clean install -DskipTests=true
+  - mnvn test -B
 
 before_script:
   - sh -e /etc/init.d/xvfb start
